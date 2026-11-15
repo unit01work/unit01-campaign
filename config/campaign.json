@@ -1,0 +1,144 @@
+{
+  "_readme": "ไฟล์ตั้งค่ากลางไฟล์เดียว แก้ตัวเลข sold ก่อนถึงเวลาส่งแต่ละรอบได้เลย ตัวเลขนี้ส่งถึงลูกค้าจริง ควรตรงกับออเดอร์จริง",
+  "timezone": "Asia/Bangkok",
+  "send_mode": "broadcast",
+  "total": 50,
+  "access_code": "APR01",
+  "price": "1,890",
+  "product_name": "APEX RACE 01",
+  "features": [
+    "Laser Cut",
+    "Bonded Edge",
+    "Anti-Bac",
+    "55 GSM"
+  ],
+  "get_access_url": "https://unit-01official.com/password",
+  "image_base_url": "https://raw.githubusercontent.com/unit01work/unit01-campaign/main/images",
+  "images": {
+    "A": "chest.jpg",
+    "B": "back.jpg",
+    "C": "detail.jpg"
+  },
+  "slots": [
+    {
+      "id": "1116-0900",
+      "date": "2026-11-16",
+      "time": "09:00",
+      "sold": 16,
+      "product_card": "A",
+      "sent": false
+    },
+    {
+      "id": "1116-1300",
+      "date": "2026-11-16",
+      "time": "13:00",
+      "sold": 18,
+      "product_card": "B",
+      "sent": false
+    },
+    {
+      "id": "1116-1900",
+      "date": "2026-11-16",
+      "time": "19:00",
+      "sold": 23,
+      "product_card": "C",
+      "sent": false
+    },
+    {
+      "id": "1117-0900",
+      "date": "2026-11-17",
+      "time": "09:00",
+      "sold": 23,
+      "product_card": "A",
+      "sent": false
+    },
+    {
+      "id": "1117-1300",
+      "date": "2026-11-17",
+      "time": "13:00",
+      "sold": 25,
+      "product_card": "B",
+      "sent": false
+    },
+    {
+      "id": "1117-1900",
+      "date": "2026-11-17",
+      "time": "19:00",
+      "sold": 27,
+      "product_card": "C",
+      "sent": false
+    },
+    {
+      "id": "1118-0900",
+      "date": "2026-11-18",
+      "time": "09:00",
+      "sold": 28,
+      "product_card": "A",
+      "sent": false
+    },
+    {
+      "id": "1118-1300",
+      "date": "2026-11-18",
+      "time": "13:00",
+      "sold": 29,
+      "product_card": "B",
+      "sent": false
+    },
+    {
+      "id": "1118-1900",
+      "date": "2026-11-18",
+      "time": "19:00",
+      "sold": 32,
+      "product_card": "C",
+      "sent": false
+    },
+    {
+      "id": "1119-0900",
+      "date": "2026-11-19",
+      "time": "09:00",
+      "sold": 35,
+      "product_card": "A",
+      "sent": false
+    },
+    {
+      "id": "1119-1300",
+      "date": "2026-11-19",
+      "time": "13:00",
+      "sold": 38,
+      "product_card": "B",
+      "sent": false
+    },
+    {
+      "id": "1119-1900",
+      "date": "2026-11-19",
+      "time": "19:00",
+      "sold": 41,
+      "product_card": "C",
+      "sent": false
+    },
+    {
+      "id": "1120-0900",
+      "date": "2026-11-20",
+      "time": "09:00",
+      "sold": 42,
+      "product_card": "A",
+      "sent": false
+    },
+    {
+      "id": "1120-1300",
+      "date": "2026-11-20",
+      "time": "13:00",
+      "sold": 45,
+      "product_card": "B",
+      "sent": false
+    },
+    {
+      "id": "1120-1900",
+      "date": "2026-11-20",
+      "time": "19:00",
+      "sold": 50,
+      "product_card": "C",
+      "sent": false
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+name: UNIT-01 Campaign Broadcast
+
+# Fires at 09:00 / 13:00 / 19:00 Asia/Bangkok on 16–20 Nov 2026 only.
+# Cron is UTC: ICT = UTC+7, so 09:00=02:00Z, 13:00=06:00Z, 19:00=12:00Z.
+on:
+  schedule:
+    - cron: '0 2 16-20 11 *'    # 09:00 ICT
+    - cron: '0 6 16-20 11 *'    # 13:00 ICT
+    - cron: '0 12 16-20 11 *'   # 19:00 ICT
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'What to run manually'
+        type: choice
+        default: list
+        options: [list, validate, test, slot]
+      slot:
+        description: 'slot id (for test/slot), e.g. 1116-0900'
+        default: '1116-0900'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Broadcast / dispatch
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_TEST_USER_ID: ${{ secrets.LINE_TEST_USER_ID }}
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            python3 send.py --due
+          else
+            case "${{ github.event.inputs.action }}" in
+              list)     python3 send.py --list ;;
+              validate) python3 send.py --validate ;;
+              test)     python3 send.py --test "${{ github.event.inputs.slot }}" ;;
+              slot)     python3 send.py --slot "${{ github.event.inputs.slot }}" ;;
+            esac
+          fi

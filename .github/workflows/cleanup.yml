@@ -1,0 +1,27 @@
+name: UNIT-01 Campaign Self-Cleanup
+
+# Runs once on 21 Nov 2026 (13:00 ICT = 06:00 UTC), the day after the campaign,
+# and wipes all campaign code/images/workflows so nothing is left running.
+on:
+  schedule:
+    - cron: '0 6 21 11 *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Empty the repository
+        run: |
+          set -e
+          git config user.name "campaign-bot"
+          git config user.email "campaign-bot@users.noreply.github.com"
+          git rm -rf send.py config images .github || true
+          printf '# UNIT-01 campaign (ended)\n\nThis temporary broadcast campaign ran 16-20 Nov 2026 and has self-cleaned.\nNothing here runs any more — safe to delete this repository.\n' > README.md
+          git add -A
+          git commit -m "Campaign ended - self-cleaned" || echo "nothing to clean"
+          git push
