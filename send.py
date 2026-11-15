@@ -77,11 +77,6 @@ def stock_flex(cfg, slot):
         ]
     bubble = {
         "type": "bubble", "size": "kilo",
-        "header": {"type": "box", "layout": "horizontal", "backgroundColor": "#111111",
-                   "paddingAll": "10px", "paddingStart": "14px", "paddingEnd": "14px", "contents": [
-                       {"type": "text", "text": "INVITE ONLY", "size": "xxs", "weight": "bold", "color": "#FFFFFF"},
-                       {"type": "text", "text": ampm(slot["time"]), "size": "xxs", "weight": "bold",
-                        "color": "#FFFFFF", "align": "end"}]},
         "body": {"type": "box", "layout": "vertical", "spacing": "sm", "paddingAll": "14px", "contents": body},
     }
     return {"type": "flex", "altText": f"Stock update {ampm(slot['time'])} · {sold}/{total} · Remain {remain}",
