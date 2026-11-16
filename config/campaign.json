@@ -26,7 +26,7 @@
       "time": "09:00",
       "sold": 16,
       "product_card": "A",
-      "sent": false
+      "sent": true
     },
     {
       "id": "1116-1300",
@@ -34,7 +34,7 @@
       "time": "13:00",
       "sold": 18,
       "product_card": "B",
-      "sent": false
+      "sent": true
     },
     {
       "id": "1116-1900",
