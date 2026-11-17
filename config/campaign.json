@@ -51,7 +51,8 @@
       "time": "12:00",
       "sold": 23,
       "product_card": "A",
-      "sent": false
+      "sent": true,
+      "sent_at": "2026-11-17T12:26:53+07:00"
     },
     {
       "id": "1117-1300",
