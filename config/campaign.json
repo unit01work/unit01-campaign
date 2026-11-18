@@ -95,7 +95,8 @@
       "time": "19:00",
       "sold": 32,
       "product_card": "C",
-      "sent": false
+      "sent": true,
+      "sent_at": "2026-11-18T19:46:25+07:00"
     },
     {
       "id": "1119-0900",
