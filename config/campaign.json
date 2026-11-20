@@ -139,7 +139,8 @@
       "time": "13:00",
       "sold": 45,
       "product_card": "B",
-      "sent": false
+      "sent": true,
+      "sent_at": "2026-11-20T13:11:36+07:00"
     },
     {
       "id": "1120-1900",
